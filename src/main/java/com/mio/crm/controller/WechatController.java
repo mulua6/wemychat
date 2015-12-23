@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/wechat")
 public class WechatController {
 
+    @RequestMapping("/forReg")
     public String forRefister(){
 
         return "";

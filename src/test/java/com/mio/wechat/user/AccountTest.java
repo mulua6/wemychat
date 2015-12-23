@@ -59,11 +59,11 @@ public class AccountTest {
 	/**
 	 * 获取二维码图片
 	 */
-	@Test
-	public void getQrcode(){
-		String ticket="gQHE7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL1RVd1BodWpsQkJSOUdGeW5JMkp6AAIEZUaZVQMERAcAAA==";
-		String qrcodeFile="D://qrcode.png";
-		com.mio.wechat.user.AccountManager.getQrcode(ticket, qrcodeFile);
-	}
+//	@Test
+//	public void getQrcode(){
+//		String ticket="gQHE7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL1RVd1BodWpsQkJSOUdGeW5JMkp6AAIEZUaZVQMERAcAAA==";
+//		String qrcodeFile="D://qrcode.png";
+//		com.mio.wechat.user.AccountManager.getQrcode(ticket, qrcodeFile);
+//	}
 	
 }
