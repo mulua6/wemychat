@@ -21,6 +21,9 @@ public class LifeDonut extends WechatSupport{
     @Override
     protected void onText() {
         this.wechatRequest.getFromUserName();
+        String msg = this.wechatRequest.getContent();
+
+
         String content = "test ok";
         responseText(content);
     }

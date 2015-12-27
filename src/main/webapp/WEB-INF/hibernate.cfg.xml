@@ -65,7 +65,7 @@
 		<property name="hibernate.c3p0.validate">true</property> 
 
 		<!-- 引入映射文件 -->
-		<mapping resource="com/mio/domain/Account.hbm.xml" />
+		<!--<mapping resource="com/mio/domain/Account.hbm.xml" />-->
 
 	</session-factory>
 </hibernate-configuration>

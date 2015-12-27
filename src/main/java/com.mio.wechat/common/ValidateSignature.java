@@ -6,6 +6,7 @@ package com.mio.wechat.common;
 import java.util.Arrays;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.log4j.Logger;
 
 /**
  * 用于微信的前面验证
@@ -13,7 +14,8 @@ import org.apache.commons.codec.digest.DigestUtils;
  * @date   2014-12-4
  */
 public class ValidateSignature {
-	
+
+	public static final Logger log = Logger.getLogger(ValidateSignature.class);
 	private String signature;
 	private String timestamp;
 	private String nonce;
@@ -40,6 +42,7 @@ public class ValidateSignature {
 	 */
 	public boolean check(){
 		String sha1 = encode();
+		log.info(String.format("sha1:%s and signature:%s",sha1,signature));
 		return sha1.equals(this.signature);
 	}
 	
@@ -49,6 +52,7 @@ public class ValidateSignature {
 	 */
 	private String encode(){
 		String[] sa = {this.token,this.timestamp, this.nonce};
+		log.info(String.format("token:%s  timestamp:%s  nonce:%s ",token,timestamp,nonce));
 		Arrays.sort(sa);
 		String sortStr = sa[0] + sa[1] + sa[2];
 		return DigestUtils.sha1Hex(sortStr);

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sword-lang-2.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/sword-lang-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

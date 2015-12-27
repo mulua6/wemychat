@@ -6,6 +6,18 @@
   <display-name>wechat system</display-name>
 
     <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>webApp.root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+
+    <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/applicationContext*.xml</param-value><!-- 通配符，有时候需要在根目录中写多个applicationContextXXX文件 -->
     </context-param>
@@ -23,27 +35,27 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     <!--OpenSessionInView 延长session的范围-->
-    <filter>
-        <filter-name>opensessioninview</filter-name>
-        <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>opensessioninview</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    <!--<filter>-->
+        <!--<filter-name>opensessioninview</filter-name>-->
+        <!--<filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>opensessioninview</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
     <!-- Spring容器 : 使用监听器创建-->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
     <servlet>
-        <servlet-name>springMVC</servlet-name>
+        <servlet-name>springmvc</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>springMVC</servlet-name>
+        <servlet-name>springmvc</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>

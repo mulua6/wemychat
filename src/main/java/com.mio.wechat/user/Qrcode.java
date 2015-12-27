@@ -1,6 +1,7 @@
 package com.mio.wechat.user;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import org.apache.log4j.Logger;
 import org.sword.lang.HttpUtils;
 
 import java.io.File;
@@ -13,6 +14,7 @@ import java.net.URLEncoder;
  * @version 2015-7-5
  */
 public class Qrcode {
+	Logger log = Logger.getLogger(Qrcode.class);
     //通过ticket换取二维码
     private static final String SHOWQRCODE_POST_URL = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=";
 	private String ticket;//	获取的二维码ticket，凭借此ticket可以在有效时间内换取二维码。
@@ -52,6 +54,7 @@ public class Qrcode {
             fStream.flush();
             fStream.close();
         } catch (Exception e) {
+			log.error(String.format("get Qrcode error "),e);
             e.printStackTrace();
         }
     }

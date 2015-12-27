@@ -20,7 +20,6 @@ public abstract class AbsServer implements IServer{
 		this.customerServerClass = getCustomerServerClass();
 	}
 	
-	@Override
 	public String token(){
 		return server().token();
 	}
