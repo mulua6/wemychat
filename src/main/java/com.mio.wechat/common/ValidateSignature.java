@@ -15,7 +15,7 @@ import org.apache.log4j.Logger;
  */
 public class ValidateSignature {
 
-	public static final Logger log = Logger.getLogger(ValidateSignature.class);
+	Logger log = Logger.getLogger(ValidateSignature.class);
 	private String signature;
 	private String timestamp;
 	private String nonce;
