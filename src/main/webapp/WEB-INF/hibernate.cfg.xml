@@ -11,12 +11,21 @@
 
 
 
-		<!--开发环境配置 -->
+		<!--&lt;!&ndash;开发环境配置 &ndash;&gt;-->
+		<!--&lt;!&ndash;&ndash;&gt;-->
+		<!--<property name="connection.username">root</property>-->
+	   	<!--<property name="connection.password">mulua&#45;&#45;1</property>-->
+		<!--<property name="hibernate.connection.url">-->
+				<!--jdbc:mysql://10.211.55.6:3306/demo?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true-->
+		<!--</property>-->
+
+
+		<!--生产环境配置 -->
 		<!---->
-		<property name="connection.username">root</property>
-	   	<property name="connection.password">mulua--1</property>
+		<property name="connection.username">db201406069568</property>
+		<property name="connection.password">mulua--1</property>
 		<property name="hibernate.connection.url">
-				jdbc:mysql://10.211.55.6:3306/demo?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true
+			jdbc:mysql://rdsavq3qaujmbzm.mysql.rds.aliyuncs.com:3306/db5zo49299iog839?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true
 		</property>
 
 		<!-- 告诉hibernate链接的是什么数据库 -->
@@ -65,7 +74,7 @@
 		<property name="hibernate.c3p0.validate">true</property> 
 
 		<!-- 引入映射文件 -->
-		<!--<mapping resource="com/mio/domain/Account.hbm.xml" />-->
+		<mapping resource="com/mio/wechat/request/WechatRequest.hbm.xml" />
 
 	</session-factory>
 </hibernate-configuration>

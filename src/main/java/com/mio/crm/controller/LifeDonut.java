@@ -1,8 +1,10 @@
 package com.mio.crm.controller;
 
+import com.mio.crm.service.MessageService;
 import com.mio.wechat.WechatSupport;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.sound.midi.Soundbank;
 
 /**
  * Created by hel2 on 23/12/15.
@@ -17,9 +19,10 @@ public class LifeDonut extends WechatSupport{
     public LifeDonut(HttpServletRequest request) {
         super(request);
     }
-
+    private MessageService messageService;
     @Override
     protected void onText() {
+        messageService.saveMessage(this.wechatRequest);
         this.wechatRequest.getFromUserName();
         String msg = this.wechatRequest.getContent();
 
@@ -45,7 +48,8 @@ public class LifeDonut extends WechatSupport{
 
     @Override
     protected void onShortVideo() {
-
+        messageService.saveMessage(this.wechatRequest);
+        this.wechatRequest.getThumbMediaId();
     }
 
     @Override
@@ -141,5 +145,13 @@ public class LifeDonut extends WechatSupport{
     @Override
     protected void kfSwitchSession() {
 
+    }
+
+    public MessageService getMessageService() {
+        return messageService;
+    }
+
+    public void setMessageService(MessageService messageService) {
+        this.messageService = messageService;
     }
 }
