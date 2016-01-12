@@ -1,5 +1,8 @@
 package com.mio.crm.controller;
 
+import com.mio.crm.service.MessageService;
+import com.mio.wechat.request.WechatRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,10 +16,15 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/wechat")
 public class WechatController {
 
+    @Autowired
+    private MessageService messageService;
+
     @RequestMapping(value="lifeDonut", produces="text/html;charset=UTF-8")
     @ResponseBody
     public String lifeDonutController(HttpServletRequest request){
         LifeDonut lifeDonut = new LifeDonut(request);
+        final WechatRequest wechatRequest = lifeDonut.getWechatRequest();
+        messageService.saveMessage(wechatRequest);
         return lifeDonut.execute();
     }
 }

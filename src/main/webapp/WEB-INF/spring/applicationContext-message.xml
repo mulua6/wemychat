@@ -15,6 +15,10 @@
 	<bean id="messagetest" class="com.mio.crm.dao.TestDao">
 		<property name="messageService" ref="messageService"/>
 	</bean>
+	<!--<bean id="col" class="com.mio.crm.controller.WechatController">-->
+		<!--<property name=""-->
+	<!--</bean>-->
+
 	<!--<bean id="lifeDonut" class="com.mio.crm.controller.LifeDonut" >-->
 		<!--<constructor-arg ref="request"/>-->
 		<!--&lt;!&ndash;<property name="messageService" ref="messageService"/>&ndash;&gt;-->

@@ -2,9 +2,9 @@ package com.mio.crm.controller;
 
 import com.mio.crm.service.MessageService;
 import com.mio.wechat.WechatSupport;
+import com.mio.wechat.request.WechatRequest;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.sound.midi.Soundbank;
 
 /**
  * Created by hel2 on 23/12/15.
@@ -153,5 +153,9 @@ public class LifeDonut extends WechatSupport{
 
     public void setMessageService(MessageService messageService) {
         this.messageService = messageService;
+    }
+
+    public WechatRequest getWechatRequest(){
+        return this.wechatRequest;
     }
 }

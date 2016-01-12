@@ -40,7 +40,7 @@ public abstract class WechatSupport {
 	
 	Logger logger = Logger.getLogger(WechatSupport.class);
 	
-	private HttpServletRequest request;
+	protected HttpServletRequest request;
 	
 	protected WechatRequest wechatRequest;
 	protected WechatResponse wechatResponse;
