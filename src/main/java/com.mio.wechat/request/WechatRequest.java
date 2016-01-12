@@ -16,6 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name="xml")
 public class WechatRequest {
+	private int id;//
 	private String ToUserName;
 	private String FromUserName;
 	private String CreateTime;
@@ -43,8 +44,13 @@ public class WechatRequest {
 	private ScanCodeInfo ScanCodeInfo; //扫描信息
 	private SendPicsInfo SendPicsInfo; //发送的图片信息
 	private SendLocationInfo SendLocationInfo;   //发送的位置信息
-	
 
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	@XmlElement(name="Format")
 	public String getFormat() {
 		return Format;

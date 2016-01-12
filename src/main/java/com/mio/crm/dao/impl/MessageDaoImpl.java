@@ -17,4 +17,13 @@ public class MessageDaoImpl implements MessageDao{
         final Session currentSession = sessionFactory.getCurrentSession();
         currentSession.save(wechatRequest);
     }
+
+
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 }

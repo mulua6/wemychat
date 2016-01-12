@@ -13,10 +13,15 @@
           http://www.springframework.org/schema/context/spring-context-4.0.xsd
           http://www.springframework.org/schema/aop    
           http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
-          
+
+    <aop:aspectj-autoproxy/>
 	<import resource="spring/applicationContext-db.xml"/>
 	<import resource="spring/applicationContext-message.xml"/>
     <!-- 自动加载构建bean -->
     <context:component-scan base-package="com.mio.crm" />
+
+    <bean id="message" class="com.mio.crm.controller.LifeDonut">
+        <constructor-arg ref=""/>
+    </bean>
 
 </beans> 

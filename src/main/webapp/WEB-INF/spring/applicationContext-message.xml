@@ -13,8 +13,8 @@
 		<property name="messageDao" ref="messageDao"/>
 	</bean>
 	
-	<bean id="lifeDonut" class="com.mio.crm.controller.LifeDonut" >
-		<property name="messageService" ref="messageService"/>
-	</bean>
+	<!--<bean id="lifeDonut" class="com.mio.crm.controller.LifeDonut" >-->
+		<!--<property name="messageService" ref="messageService"/>-->
+	<!--</bean>-->
 	
 </beans> 

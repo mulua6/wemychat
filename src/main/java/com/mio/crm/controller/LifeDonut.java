@@ -22,7 +22,7 @@ public class LifeDonut extends WechatSupport{
     private MessageService messageService;
     @Override
     protected void onText() {
-        messageService.saveMessage(this.wechatRequest);
+//        messageService.saveMessage(this.wechatRequest);
         this.wechatRequest.getFromUserName();
         String msg = this.wechatRequest.getContent();
 
@@ -48,7 +48,7 @@ public class LifeDonut extends WechatSupport{
 
     @Override
     protected void onShortVideo() {
-        messageService.saveMessage(this.wechatRequest);
+//        messageService.saveMessage(this.wechatRequest);
         this.wechatRequest.getThumbMediaId();
     }
 

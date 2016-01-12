@@ -102,6 +102,17 @@
       <artifactId>spring-orm</artifactId>
       <version>4.1.6.RELEASE</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>4.1.6.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>1.5.3</version>
+    </dependency>
+
 
 
     <dependency>
@@ -129,7 +140,6 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
-
 
   </dependencies>
   <build>
