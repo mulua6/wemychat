@@ -14,6 +14,10 @@ public class MessageServiceImpl implements MessageService{
         messageDao.saveMessage(wechatRequest);
     }
 
+    public void say() {
+        System.out.println("server say");
+    }
+
 
     public MessageDao getMessageDao() {
         return messageDao;

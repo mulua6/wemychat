@@ -20,8 +20,4 @@
     <!-- 自动加载构建bean -->
     <context:component-scan base-package="com.mio.crm" />
 
-    <bean id="message" class="com.mio.crm.controller.LifeDonut">
-        <constructor-arg ref=""/>
-    </bean>
-
-</beans> 
+</beans>

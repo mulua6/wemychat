@@ -12,9 +12,11 @@
 	<bean id="messageService" class="com.mio.crm.service.impl.MessageServiceImpl">
 		<property name="messageDao" ref="messageDao"/>
 	</bean>
-	
+	<bean id="messagetest" class="com.mio.crm.dao.TestDao">
+		<property name="messageService" ref="messageService"/>
+	</bean>
 	<!--<bean id="lifeDonut" class="com.mio.crm.controller.LifeDonut" >-->
-		<!--<property name="messageService" ref="messageService"/>-->
+		<!--<constructor-arg ref="request"/>-->
+		<!--&lt;!&ndash;<property name="messageService" ref="messageService"/>&ndash;&gt;-->
 	<!--</bean>-->
-	
-</beans> 
+</beans>

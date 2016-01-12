@@ -32,10 +32,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sword-lang-2.0.0" level="project" />
+    <orderEntry type="library" name="Maven: aspectj:aspectjrt:1.5.3" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: org.sword.lang:sword:2.0.0">
         <CLASSES>
-          <root url="jar:///Users/hel2/work/wechart/wechat/wechat/src/main/webapp/WEB-INF/lib/sword-lang-2.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/main/webapp/WEB-INF/lib/sword-lang-2.0.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
