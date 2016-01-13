@@ -3,6 +3,7 @@ package com.mio.crm.controller;
 import com.mio.crm.service.MessageService;
 import com.mio.wechat.WechatSupport;
 import com.mio.wechat.request.WechatRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,13 +20,15 @@ public class LifeDonut extends WechatSupport{
     public LifeDonut(HttpServletRequest request) {
         super(request);
     }
+
+    @Autowired
     private MessageService messageService;
     @Override
     protected void onText() {
 //        messageService.saveMessage(this.wechatRequest);
         this.wechatRequest.getFromUserName();
         String msg = this.wechatRequest.getContent();
-
+//        messageService.saveMessage(wechatRequest);
 
         String content = "test ok";
         responseText(content);

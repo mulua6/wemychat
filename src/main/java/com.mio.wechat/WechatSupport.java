@@ -9,8 +9,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.mio.crm.service.MessageService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.sword.lang.JaxbParser;
 import org.sword.lang.StreamUtils;
 import com.mio.wechat.common.Config;
@@ -44,7 +46,8 @@ public abstract class WechatSupport {
 	
 	protected WechatRequest wechatRequest;
 	protected WechatResponse wechatResponse;
-	
+	@Autowired
+	private MessageService messageService;
 	
 	/**
 	 * 构建微信处理
@@ -501,4 +504,12 @@ public abstract class WechatSupport {
 	 * 客服人员有转接会话
 	 */
 	protected abstract void kfSwitchSession();
+
+	public MessageService getMessageService() {
+		return messageService;
+	}
+
+	public void setMessageService(MessageService messageService) {
+		this.messageService = messageService;
+	}
 }

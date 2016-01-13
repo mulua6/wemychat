@@ -23,8 +23,11 @@ public class WechatController {
     @ResponseBody
     public String lifeDonutController(HttpServletRequest request){
         LifeDonut lifeDonut = new LifeDonut(request);
+        System.out.println("test");
+        System.out.println(request.toString());
+        String str = lifeDonut.execute();
         final WechatRequest wechatRequest = lifeDonut.getWechatRequest();
         messageService.saveMessage(wechatRequest);
-        return lifeDonut.execute();
+        return str;
     }
 }
